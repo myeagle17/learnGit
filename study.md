@@ -48,4 +48,12 @@
 * 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交(git add)，合并完成。
 * 用git log --graph命令可以看到分支合并图。
 
+### 使用GitHub
+* 在GitHub上，可以任意Fork开源仓库；
+* 自己拥有Fork后的仓库的读写权限；
+* 可以推送pull request给官方仓库来贡献代码。
+
+### 自定义Git
+$ git config --global color.ui true
+
 
