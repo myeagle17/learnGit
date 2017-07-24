@@ -1,3 +1,5 @@
+### 前言
+仅仅是从廖大那里进行的git的学习笔记，把每章后面的总结纪录下来。详细学习还是看廖大教程，非常适合入门。[廖大网址](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 ### 基础命令
 1. 初始化一个Git仓库，使用git init命令。
 2. 添加文件到Git仓库，分两步：
@@ -67,7 +69,23 @@
 
 ### 自定义Git
 $ git config --global color.ui true
+
 #### 忽略特殊文件
+* 忽略某些文件时，需要编写.gitignore；
+* .gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理！
+* 不需要从头写.gitignore文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：[https://github.com/github/gitignore](https://github.com/github/gitignore)
+* 忽略文件的原则（想起自己随便上传github，惭愧啊）
+    1. 忽略操作系统自动生成的文件，比如缩略图等；
+    2. 忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的.class文件；
+    3. 忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。
+
+#### 配置别名
+这是我最喜欢的功能，类似linux下的alias,ln。比如：git config --global alias.st status ， 输入git st相当于git status,两点注意：
+* --global 参数表示对所有git 项目有效，去掉后表示仅对当前项目有效
+* 每个仓库的Git配置文件都放在.git/config文件中
+* 当前用户的Git配置文件放在用户目录下的.gitConfig中，比如Mac下是：~/.gitconfig
+
+#### 搭建Git服务器
 
 
 
